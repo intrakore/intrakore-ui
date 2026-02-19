@@ -11,6 +11,8 @@ import { Node } from '@tiptap/pm/model'
 import { fileToBase64 } from '../../../../index'
 import { UploadedFile } from '../../../../utils/useFileUpload'
 
+export const localFileMap = new Map()
+
 export interface ImageExtensionOptions {
   /**
    * Function to handle image uploads
@@ -390,8 +392,9 @@ function uploadImageBase(
       const node = view.state.schema.nodes.image.create({
         loading: true,
         uploadId,
-        src: base64Result,
+        src: null,
       })
+      localFileMap.set(uploadId, base64Result)
 
       const tr = view.state.tr
       if (insertMode === 'replace') {
