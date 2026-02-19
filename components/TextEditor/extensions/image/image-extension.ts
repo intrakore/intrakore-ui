@@ -60,6 +60,10 @@ declare module '@tiptap/core' {
        * Set image float for text wrapping
        */
       setImageFloat: (float: 'left' | 'right' | null) => ReturnType
+      /**
+       * Re-upload a failed image using the file stored in localFileMap
+       */
+      reuploadImage: (uploadId: string) => ReturnType
     }
   }
 }
@@ -219,6 +223,33 @@ export const ImageExtension = NodeExtension.create<ImageExtensionOptions>({
           }
           input.click()
           return true
+        },
+
+      reuploadImage:
+        (uploadId: string) =>
+        ({ editor }) => {
+          const fileData = localFileMap.get(uploadId)
+          if (!fileData) {
+            console.error('reuploadImage: no file with uploadId', uploadId)
+            return false
+          }
+
+          // Find the node position
+          let nodePos: number | null = null
+          editor.view.state.doc.descendants((node, pos) => {
+            if (node.type.name === 'image' && node.attrs.uploadId === uploadId) {
+              nodePos = pos
+              return false
+            }
+          })
+
+          if (nodePos === null) {
+            console.error('reuploadImage: could not find node with uploadId', uploadId)
+            return false
+          }
+
+          // Re-run the upload using the stored file, replacing the node at its position
+          return uploadImageBase(fileData.file, editor.view, nodePos, this.options, 'replace')
         },
     }
   },
@@ -394,7 +425,7 @@ function uploadImageBase(
         uploadId,
         src: null,
       })
-      localFileMap.set(uploadId, base64Result)
+      localFileMap.set(uploadId, {b64: base64Result, file })
 
       const tr = view.state.tr
       if (insertMode === 'replace') {

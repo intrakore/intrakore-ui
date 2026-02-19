@@ -32,7 +32,7 @@ const floatButtonRef = ref<HTMLElement | null>(null)
 
 const showCaption = ref(props.node.attrs.alt ? true : false)
 const isVideo = computed(() => props.node.type.name === 'video')
-const fileContent = computed(() => localFileMap.get(props.node.attrs.uploadId))
+const fileContent = computed(() => localFileMap.get(props.node.attrs.uploadId)?.b64)
 
 const currentAlignIcon = computed(() => {
   return (
@@ -361,6 +361,7 @@ const wrapperClasses = (float: string) => [
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           :icon-left="h(LucideRotateCw, { class: 'size-4' })"
           label="Try again"
+          @click="editor.commands.reuploadImage(node.attrs.uploadId)"
         />
 
         <button v-if="selected && isEditable && node.attrs.src" class="absolute bottom-2 right-2 cursor-nw-resize bg-black/65 rounded p-1"
