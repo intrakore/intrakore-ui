@@ -497,6 +497,7 @@ function uploadVideoBase(
             height: uploadedVideo.height || node.attrs.height,
             loading: false,
           })
+          localFileMap.delete(node.attrs.uploadId)
           return false
         }
       })
