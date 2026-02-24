@@ -401,6 +401,8 @@ function findInsertPosition(
 }
 
 // Base upload function shared by all video upload methods
+type VideoDimensions = { width: number | null; height: number | null }
+
 function uploadVideoBase(
   file: File,
   view: EditorView,
@@ -419,12 +421,24 @@ function uploadVideoBase(
 
   fileToBase64(file)
     .then((base64Result: string) => {
+      localFileMap.set(uploadId, { b64: base64Result, file })
+
+      const objectUrl = URL.createObjectURL(file)
+      return getVideoDimensions(objectUrl)
+        .catch((): VideoDimensions => ({ width: null, height: null }))
+        .then((dimensions: VideoDimensions) => {
+          URL.revokeObjectURL(objectUrl)
+          return dimensions
+        })
+    })
+    .then((dimensions: VideoDimensions) => {
       const node = view.state.schema.nodes.video.create({
         loading: true,
         uploadId,
         src: null,
+        width: dimensions.width,
+        height: dimensions.height,
       })
-      localFileMap.set(uploadId, { b64: base64Result, file })
 
       const tr = view.state.tr
       if (insertMode === 'replace') {
@@ -471,22 +485,6 @@ function uploadVideoBase(
 
       return options.uploadFunction(file)
     })
-    .then((uploadedVideo: UploadedFile) => {
-      return getVideoDimensions(uploadedVideo.file_url)
-        .then((dimensions) => {
-          return {
-            ...uploadedVideo,
-            width: dimensions.width,
-            height: dimensions.height,
-          } as UploadedFile & { width: number; height: number }
-        })
-        .catch(() => {
-          return uploadedVideo as UploadedFile & {
-            width: number
-            height: number
-          }
-        })
-    })
     .then((uploadedVideo) => {
       const transaction = view.state.tr
 
@@ -515,6 +513,7 @@ function uploadVideoBase(
 
         view.state.doc.descendants((node, pos) => {
           if (node.type.name === 'video' && node.attrs.uploadId === uploadId) {
+            // width/height are preserved from ...node.attrs (pre-fetched from local file)
             transaction.setNodeMarkup(pos, undefined, {
               ...node.attrs,
               loading: false,
@@ -590,7 +589,7 @@ function updateNodeWithDimensions(
       }
     })
     .catch((error) => {
-      console.error('Could not upload video', error)
+      console.error('Could not get video dimensions', error)
     })
 }
 
