@@ -236,6 +236,38 @@ describe('<Badge />', () => {
     cy.get('.inline-flex.rounded-full').should('have.class', 'whitespace-nowrap')
   })
 
+  it('renders blueprint theme with all variants', () => {
+    // Subtle
+    cy.mount(Badge, {
+      props: { theme: 'blueprint', variant: 'subtle', label: 'Blueprint Subtle' },
+    })
+    cy.get('.inline-flex.rounded-full').should('have.class', 'text-ink-blueprint-4')
+    cy.get('.inline-flex.rounded-full').should('have.class', 'bg-surface-blueprint-2')
+
+    // Solid
+    cy.mount(Badge, {
+      props: { theme: 'blueprint', variant: 'solid', label: 'Blueprint Solid' },
+    })
+    cy.get('.inline-flex.rounded-full').should('have.class', 'text-ink-blueprint-1')
+    cy.get('.inline-flex.rounded-full').should('have.class', 'bg-surface-blueprint-7')
+
+    // Outline
+    cy.mount(Badge, {
+      props: { theme: 'blueprint', variant: 'outline', label: 'Blueprint Outline' },
+    })
+    cy.get('.inline-flex.rounded-full').should('have.class', 'text-ink-blueprint-4')
+    cy.get('.inline-flex.rounded-full').should('have.class', 'bg-transparent')
+    cy.get('.inline-flex.rounded-full').should('have.class', 'border-outline-blueprint-2')
+
+    // Ghost
+    cy.mount(Badge, {
+      props: { theme: 'blueprint', variant: 'ghost', label: 'Blueprint Ghost' },
+    })
+    cy.get('.inline-flex.rounded-full').should('have.class', 'text-ink-blueprint-4')
+    cy.get('.inline-flex.rounded-full').should('have.class', 'bg-transparent')
+  })
+
+  
   it('renders prefix slot with correct size constraints', () => {
     const TestIcon = {
       render() {

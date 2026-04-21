@@ -5,7 +5,7 @@
     :class="item.align ? alignmentMap[item.align] : 'justify-between'"
   >
     <div
-      class="flex items-center gap-2 truncate text-sm text-ink-gray-5"
+      class="flex items-center gap-2 truncate text-sm text-ink-blueprint-4"
       :class="$attrs.class"
     >
       <slot name="prefix" v-bind="{ item }" />
@@ -23,7 +23,7 @@
       >
         <div
           ref="resizer"
-          class="h-full w-[2px] rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-400"
+          class="h-full w-[2px] rounded-full transition-all duration-300 ease-in-out group-hover:bg-blueprint-400"
         />
       </div>
     </slot>

@@ -87,10 +87,10 @@ export default {
         { name: 'Orange', class: 'text-orange-600 dark:text-dark-orange-400' },
         { name: 'Yellow', class: 'text-yellow-600 dark:text-dark-yellow-400' },
         { name: 'Green', class: 'text-green-600 dark:text-dark-green-400' },
-        { name: 'Teal', class: 'text-teal-600 dark:text-dark-teal-400' },
+        { name: 'Teal', class: 'text-clearing-600 dark:text-dark-clearing-400' },
         { name: 'Cyan', class: 'text-cyan-600 dark:text-dark-cyan-400' },
         { name: 'Blue', class: 'text-blue-600 dark:text-dark-blue-400' },
-        { name: 'Purple', class: 'text-purple-600 dark:text-dark-purple-400' },
+        { name: 'Purple', class: 'text-dusk-600 dark:text-dark-dusk-400' },
         { name: 'Pink', class: 'text-pink-600 dark:text-dark-pink-400' },
         { name: 'Gray', class: 'text-gray-600 dark:text-dark-gray-400' },
       ]
@@ -116,7 +116,7 @@ export default {
         },
         {
           name: 'Teal',
-          class: 'bg-teal-100 dark:bg-dark-teal-800 border-transparent',
+          class: 'bg-clearing-100 dark:bg-dark-clearing-800 border-transparent',
         },
         {
           name: 'Cyan',
@@ -128,7 +128,7 @@ export default {
         },
         {
           name: 'Purple',
-          class: 'bg-purple-100 dark:bg-dark-purple-800 border-transparent',
+          class: 'bg-dusk-100 dark:bg-dark-dusk-800 border-transparent',
         },
         {
           name: 'Pink',

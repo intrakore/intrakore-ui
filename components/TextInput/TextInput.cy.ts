@@ -22,7 +22,7 @@ const sizeCLass = {
 }
 
 const variantClasses = {
-  subtle: 'bg-surface-gray-2',
+  subtle: 'bg-surface-blueprint-2',
   outline: 'bg-surface-white',
   ghost: 'border-0',
 }
@@ -60,7 +60,7 @@ describe('Textinput', () => {
       props: { type: 'text', disabled: true },
     })
 
-    cy.get(`input[type=text]`).should('have.class', 'text-ink-gray-5')
+    cy.get(`input[type=text]`).should('have.class', 'text-ink-blueprint-2')
   })
 
   it('variants', () => {

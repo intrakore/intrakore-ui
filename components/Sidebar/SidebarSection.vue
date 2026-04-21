@@ -7,7 +7,7 @@
       @click="props.collapsible ? (isCollapsed = !isCollapsed) : null"
     >
       <h3
-        class="h-4 text-sm text-ink-gray-5 transition-all duration-300 ease-in-out"
+        class="h-4 text-sm text-ink-blueprint-1 transition-all duration-300 ease-in-out"
         :class="
           isSidebarCollapsed
             ? 'w-0 overflow-hidden opacity-0'
@@ -19,7 +19,7 @@
       <div v-if="props.collapsible">
         <LucideChevronRight
           v-if="!isSidebarCollapsed"
-          class="w-4 h-4 text-ink-gray-5 transition-all duration-300 ease-in-out"
+          class="w-4 h-4 text-ink-blueprint-1 transition-all duration-300 ease-in-out"
           :class="{ 'rotate-90': !isCollapsed }"
         />
       </div>
@@ -28,7 +28,7 @@
         class="absolute top-0 left-0 flex h-full w-full items-center justify-center transition-all duration-300 ease-in-out"
         :class="isSidebarCollapsed ? 'opacity-100' : 'opacity-0'"
       >
-        <hr class="w-full border-t border-ink-gray-3" />
+        <hr class="w-full border-t border-outline-blueprint-2" />
       </div>
     </div>
     <transition

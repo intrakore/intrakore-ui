@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex h-full flex-col flex-shrink-0 overflow-y-auto overflow-x-hidden border-r border-outline-gray-1 bg-surface-menu-bar transition-all duration-300 ease-in-out p-2"
+    class="flex h-full flex-col flex-shrink-0 overflow-y-auto overflow-x-hidden border-r border-outline-blueprint-1 bg-surface-menu-bar transition-all duration-300 ease-in-out p-2"
     :class="shouldCollapse ? 'w-12' : 'w-60'"
   >
     <slot name="header">
@@ -43,7 +43,7 @@
       >
         <template #icon>
           <LucidePanelRightOpen
-            class="size-4 text-ink-gray-6 duration-300 ease-in-out"
+            class="size-4 text-ink-blueprint-1 duration-300 ease-in-out"
             :class="{ 'rotate-180': shouldCollapse }"
           />
         </template>

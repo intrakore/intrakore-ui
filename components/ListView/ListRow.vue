@@ -8,7 +8,7 @@
       isHoverable
         ? isSelected || isActive
           ? 'hover:bg-surface-gray-3'
-          : 'hover:bg-surface-menu-bar'
+          : 'hover:bg-surface-gray-1'
         : '',
     ]"
     class="flex flex-col transition-all duration-300 ease-in-out"

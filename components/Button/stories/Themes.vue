@@ -7,4 +7,5 @@ import { Button } from 'frappe-ui'
   <Button theme="blue">Blue</Button>
   <Button theme="green">Green</Button>
   <Button theme="red">Red</Button>
+  <Button theme="blueprint">Blueprint</Button>
 </template>

@@ -7,8 +7,8 @@
           isCollapsed
             ? 'w-auto px-0'
             : open
-              ? 'bg-surface-white px-2 shadow-sm'
-              : 'px-2 hover:bg-surface-gray-3'
+              ? 'bg-surface-blueprint-7 px-2 shadow-sm'
+              : 'px-2 hover:bg-surface-blueprint-6'
         "
       >
         <div class="w-8 h-8 rounded overflow-hidden">
@@ -21,7 +21,7 @@
             />
             <div
               v-else-if="!props.logo"
-              class="w-full h-full bg-surface-gray-4 flex items-center justify-center text-ink-gray-7"
+              class="w-full h-full bg-surface-blueprint-7 flex items-center justify-center text-ink-blueprint-1"
             >
               {{ props.title.charAt(0).toUpperCase() }}
             </div>
@@ -36,10 +36,10 @@
               : 'ml-2 w-auto opacity-100'
           "
         >
-          <div class="text-base font-medium text-ink-gray-8 leading-none">
+          <div class="text-base font-medium text-ink-blueprint-1 leading-none">
             {{ props.title }}
           </div>
-          <div class="mt-1 text-sm text-ink-gray-6 leading-none">
+          <div class="mt-1 text-sm text-ink-blueprint-1 leading-none">
             {{ props.subtitle }}
           </div>
         </div>
@@ -51,7 +51,7 @@
               : 'ml-2 w-auto opacity-100'
           "
         >
-          <LucideChevronDown class="h-4 w-4 text-ink-gray-7" />
+          <LucideChevronDown class="h-4 w-4 text-ink-blueprint-1" />
         </div>
       </button>
     </template>

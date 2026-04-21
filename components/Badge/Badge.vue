@@ -32,6 +32,7 @@ const props = withDefaults(defineProps<BadgeProps>(), {
 const classes = computed(() => {
   let solidClasses = {
     gray: 'text-ink-white bg-surface-gray-7',
+    blueprint: 'text-ink-blueprint-1 bg-surface-blueprint-7',
     blue: 'text-ink-blue-1 bg-surface-blue-2',
     green: 'text-ink-green-1 bg-surface-green-3',
     orange: 'text-ink-amber-1 bg-surface-amber-2',
@@ -40,6 +41,7 @@ const classes = computed(() => {
 
   let subtleClasses = {
     gray: 'text-ink-gray-6 bg-surface-gray-2',
+    blueprint: 'text-ink-blueprint-4 bg-surface-blueprint-2',
     blue: 'text-ink-blue-2 bg-surface-blue-2',
     green: 'text-ink-green-3 bg-surface-green-2',
     orange: 'text-ink-amber-3 bg-surface-amber-1',
@@ -48,6 +50,7 @@ const classes = computed(() => {
 
   let outlineClasses = {
     gray: 'text-ink-gray-6 bg-transparent border border-outline-gray-1',
+    blueprint: 'text-ink-blueprint-4 bg-transparent border border-outline-blueprint-2',
     blue: 'text-ink-blue-2 bg-transparent border border-outline-blue-1',
     green: 'text-ink-green-3 bg-transparent border border-outline-green-2',
     orange: 'text-ink-amber-3 bg-transparent border border-outline-amber-2',
@@ -56,6 +59,7 @@ const classes = computed(() => {
 
   let ghostClasses = {
     gray: 'text-ink-gray-6 bg-transparent',
+    blueprint: 'text-ink-blueprint-4 bg-transparent',
     blue: 'text-ink-blue-2 bg-transparent',
     green: 'text-ink-green-3 bg-transparent',
     orange: 'text-ink-amber-3 bg-transparent',

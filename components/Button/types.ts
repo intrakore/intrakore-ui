@@ -1,7 +1,7 @@
 import { type RouterLinkProps } from 'vue-router'
 import { type Component } from 'vue'
 
-type Theme = 'gray' | 'blue' | 'green' | 'red'
+type Theme = 'gray' | 'blue' | 'green' | 'red'| 'blueprint'
 type Size = 'sm' | 'md' | 'md' | 'lg' | 'xl' | '2xl'
 type Variant = 'solid' | 'subtle' | 'outline' | 'ghost'
 

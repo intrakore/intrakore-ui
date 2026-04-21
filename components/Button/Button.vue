@@ -72,7 +72,7 @@ import Tooltip from '../Tooltip/Tooltip.vue'
 defineOptions({ inheritAttrs: false })
 
 const props = withDefaults(defineProps<ButtonProps>(), {
-  theme: 'gray',
+  theme: 'blueprint',
   size: 'sm',
   variant: 'subtle',
   loading: false,
@@ -90,6 +90,7 @@ const buttonClasses = computed(() => {
     green:
       'text-ink-white bg-surface-green-3 hover:bg-green-700 active:bg-green-800',
     red: 'text-ink-white bg-surface-red-5 hover:bg-surface-red-6 active:bg-surface-red-7',
+    blueprint: 'text-ink-blueprint-1 bg-surface-blueprint-7 hover:bg-surface-blueprint-6 active:bg-surface-blueprint-5',
   }[props.theme]
 
   let subtleClasses = {
@@ -98,6 +99,7 @@ const buttonClasses = computed(() => {
     green:
       'text-green-800 bg-surface-green-2 hover:bg-green-200 active:bg-green-300',
     red: 'text-red-700 bg-surface-red-2 hover:bg-surface-red-3 active:bg-surface-red-4',
+    blueprint: 'text-ink-blueprint-4 bg-surface-blueprint-2 hover:bg-surface-blueprint-3 active:bg-surface-blueprint-4',
   }[props.theme]
 
   let outlineClasses = {
@@ -106,6 +108,7 @@ const buttonClasses = computed(() => {
     green:
       'text-green-800 bg-surface-white border border-outline-green-2 hover:border-green-500 active:border-green-500 active:bg-green-300',
     red: 'text-red-700 bg-surface-white border border-outline-red-1 hover:border-outline-red-2 active:border-outline-red-2 active:bg-surface-red-3',
+    blueprint: 'text-ink-blueprint-4 bg-surface-white border border-outline-blueprint-2 hover:border-outline-blueprint-3 active:border-outline-blueprint-4 active:bg-surface-blueprint-3',
   }[props.theme]
 
   let ghostClasses = {
@@ -114,6 +117,7 @@ const buttonClasses = computed(() => {
     green:
       'text-green-800 bg-transparent hover:bg-green-200 active:bg-green-300',
     red: 'text-red-700 bg-transparent hover:bg-surface-red-3 active:bg-surface-red-4',
+    blueprint: 'text-ink-blueprint-4 bg-transparent hover:bg-surface-blueprint-2 active:bg-surface-blueprint-3',
   }[props.theme]
 
   let focusClasses = {
@@ -121,6 +125,7 @@ const buttonClasses = computed(() => {
     blue: 'focus-visible:ring focus-visible:ring-blue-400',
     green: 'focus-visible:ring focus-visible:ring-outline-green-2',
     red: 'focus-visible:ring focus-visible:ring-outline-red-2',
+    blueprint: 'focus-visible:ring focus-visible:ring-outline-blueprint-2',
   }[props.theme]
 
   let variantClasses = {
@@ -156,6 +161,10 @@ const buttonClasses = computed(() => {
     'red-outline':
       'bg-surface-red-2 text-ink-red-2 border border-outline-red-1',
     'red-ghost': 'text-ink-red-2',
+    'blueprint-solid': 'bg-surface-blueprint-1 text-ink-blueprint-2',
+    'blueprint-subtle': 'bg-surface-blueprint-1 text-ink-blueprint-2',
+    'blueprint-outline': 'bg-surface-blueprint-1 text-ink-blueprint-2 border border-outline-blueprint-1',
+    'blueprint-ghost': 'text-ink-blueprint-2',
   }
   let disabledClasses = disabledClassesMap[themeVariant]
 

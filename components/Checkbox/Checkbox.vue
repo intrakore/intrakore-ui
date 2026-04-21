@@ -4,7 +4,7 @@
     :class="{
       'px-2.5 py-1.5': padding && size === 'sm',
       'px-3 py-2': padding && size === 'md',
-      'focus-within:bg-surface-gray-2 focus-within:ring-2 focus-within:ring-outline-gray-3 hover:bg-surface-gray-3 active:bg-surface-gray-4':
+      'focus-within:bg-surface-blueprint-3 focus-within:ring-2 focus-within:ring-outline-blueprint-2 hover:bg-surface-blueprint-2 active:bg-surface-blueprint-3':
         padding && !disabled,
     }"
   >
@@ -46,21 +46,21 @@ const labelClasses = computed(() => {
       sm: 'text-base font-medium',
       md: 'text-lg font-medium',
     }[props.size],
-    props.disabled ? 'text-ink-gray-4' : 'text-ink-gray-8',
+    props.disabled ? 'text-ink-blueprint-2' : 'text-ink-blueprint-4',
     'select-none',
   ]
 })
 
 const inputClasses = computed(() => {
   let baseClasses = props.disabled
-    ? 'border-outline-gray-2 bg-surface-menu-bar text-ink-gray-3'
-    : 'border-outline-gray-4 text-ink-gray-9 hover:border-outline-gray-5 focus:ring-offset-0 focus:border-outline-gray-8 active:border-outline-gray-6 transition'
+    ? 'border-outline-blueprint-1 bg-surface-blueprint-2 text-ink-blueprint-1'
+    : 'border-outline-blueprint-4 text-blueprint-500 hover:border-outline-blueprint-3 hover:text-blueprint-500 focus:ring-offset-0 focus:border-outline-blueprint-4 active:border-outline-blueprint-4 active:text-blueprint-500 transition'
 
   let interactionClasses = props.disabled
     ? ''
     : props.padding
       ? 'focus:ring-0'
-      : 'hover:shadow-sm focus:ring-0 focus-visible:ring-2 focus-visible:ring-outline-gray-3 active:bg-surface-gray-2'
+      : 'hover:shadow-sm focus:ring-0 focus-visible:ring-2 focus-visible:ring-outline-blueprint-2 active:bg-surface-blueprint-1'
 
   let sizeClasses = {
     sm: 'w-3.5 h-3.5',

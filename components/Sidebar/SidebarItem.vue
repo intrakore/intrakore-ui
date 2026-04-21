@@ -5,8 +5,8 @@
     class="!w-full focus-visible:ring-0 focus:outline-none"
     :class="
       props.isActive
-        ? '!bg-surface-selected shadow-sm'
-        : 'hover:bg-surface-gray-2'
+        ? '!bg-surface-blueprint-7 shadow-sm'
+        : 'hover:bg-surface-blueprint-6'
     "
     variant="ghost"
     :accesskey="props.accessKey"
@@ -25,14 +25,14 @@
               <slot name="icon">
                 <span
                   v-if="props.icon && typeof props.icon === 'string'"
-                  class="size-4 text-ink-gray-6"
+                  class="size-4 text-ink-blueprint-1"
                 >
                   {{ props.icon }}
                 </span>
                 <component
                   v-else
                   :is="props.icon"
-                  class="size-4 text-ink-gray-6"
+                  class="size-4 text-ink-blueprint-1"
                 />
               </slot>
             </span>
@@ -44,7 +44,7 @@
             :hoverDelay="1.5"
           >
             <span
-              class="flex-1 flex-shrink-0 truncate text-sm transition-all ease-in-out"
+              class="flex-1 flex-shrink-0 truncate text-sm text-ink-blueprint-1 transition-all ease-in-out"
               :class="
                 isCollapsed
                   ? 'ml-0 w-0 overflow-hidden opacity-0'
@@ -64,7 +64,7 @@
           "
         >
           <slot name="suffix">
-            <span v-if="props.suffix" class="text-sm text-ink-gray-4">
+            <span v-if="props.suffix" class="text-sm text-ink-blueprint-1">
               {{ props.suffix }}
             </span>
           </slot>

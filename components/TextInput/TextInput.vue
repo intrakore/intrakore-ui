@@ -80,7 +80,7 @@ const inputRef = ref<HTMLInputElement | null>(null)
 defineExpose({ el: inputRef })
 
 const textColor = computed(() => {
-  return props.disabled ? 'text-ink-gray-5' : 'text-ink-gray-8'
+  return props.disabled ? 'text-ink-blueprint-2' : 'text-ink-blueprint-2'
 })
 
 const inputClasses = computed(() => {
@@ -117,13 +117,13 @@ const inputClasses = computed(() => {
   let variant = props.disabled ? 'disabled' : props.variant
   let variantClasses = {
     subtle:
-      'border border-[--surface-gray-2] bg-surface-gray-2 placeholder-ink-gray-4 hover:border-outline-gray-modals hover:bg-surface-gray-3 focus:bg-surface-white focus:border-outline-gray-4 focus:shadow-sm focus:ring-0 focus-visible:ring-2 focus-visible:ring-outline-gray-3',
+      'border border-transparent bg-surface-blueprint-2 placeholder-ink-blueprint-2 hover:text-ink-blueprint-2 hover:bg-surface-blueprint-1 focus:text-ink-blueprint-4 focus:bg-surface-blueprint-2 focus:border-transparent focus:ring-2 focus:ring-outline-blueprint-2 focus:ring-offset-0 active:text-ink-blueprint-4 active:bg-surface-blueprint-2 active:border-outline-blueprint-3',
     outline:
-      'border border-outline-gray-2 bg-surface-white placeholder-ink-gray-4 hover:border-outline-gray-3 hover:shadow-sm focus:bg-surface-white focus:border-outline-gray-4 focus:shadow-sm focus:ring-0 focus-visible:ring-2 focus-visible:ring-outline-gray-3',
+      'border border-outline-blueprint-2 bg-surface-white placeholder-ink-blueprint-3 hover:text-ink-blueprint-3 hover:border-outline-blueprint-3 focus:text-ink-blueprint-4 focus:border-transparent focus:ring-2 focus:ring-outline-blueprint-2 focus:ring-offset-0 active:text-ink-blueprint-4 active:border-outline-blueprint-4',
     disabled: [
-      'border bg-surface-gray-1 placeholder-ink-gray-3',
+      'border bg-surface-blueprint-1 placeholder-ink-blueprint-2',
       props.variant === 'outline'
-        ? 'border-outline-gray-2'
+        ? 'border-outline-blueprint-1'
         : 'border-transparent',
     ],
     ghost: 'border-0 focus:ring-0 focus-visible:ring-0',

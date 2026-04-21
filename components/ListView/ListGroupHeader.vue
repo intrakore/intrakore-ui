@@ -2,10 +2,10 @@
   <div class="flex items-center">
     <button
       @click="toggleGroup"
-      class="ms-[3px] me-[11px] rounded p-1 hover:bg-surface-gray-2"
+      class="ms-[3px] me-[11px] rounded p-1 hover:bg-surface-blueprint-1"
     >
       <DownSolid
-        class="h-4 w-4 text-ink-gray-6 transition-transform duration-200"
+        class="h-4 w-4 text-ink-blueprint-3 transition-transform duration-200"
         :class="[group.collapsed ? '-rotate-90' : '']"
       />
     </button>

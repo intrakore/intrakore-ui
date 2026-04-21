@@ -1,5 +1,481 @@
+/* ── Avenir ── */
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir/Avenir-Roman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir/Avenir-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir/Avenir Book.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir/Avenir Heavy.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir/Avenir Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* ── ITC Avant Garde Gothic Pro ── */
+@font-face {
+  font-family: 'ITC Avant Garde Gothic Pro';
+  src: url('./fonts/AvantGarde/ITC Avant Garde Gothic CE Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ITC Avant Garde Gothic Pro';
+  src: url('./fonts/AvantGarde/ITC Avant Garde Gothic Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ITC Avant Garde Gothic Pro';
+  src: url('./fonts/AvantGarde/ITC Avant Garde Gothic CE Demi.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ITC Avant Garde Gothic Pro';
+  src: url('./fonts/AvantGarde/ITC Avant Garde Gothic Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 @import './fonts/Inter/inter.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* =============================================================================
+   TYPOGRAPHY SCALE — Intrakore Design System
+   Source: Figma file "Intrakore-Design-system" (node 8828:31362)
+
+   Two font families:
+     Display  — ITC Avant Garde Gothic  (sizes 28 px – 88 px, tokens text/5xl–15xl)
+     Body     — Avenir                  (sizes 11 px – 26 px, tokens text/tiny–4xl)
+
+   Two leading scales:
+     text/*      — tight leading (UI labels, headings)
+     paragraph/* — relaxed leading (running text)
+
+   Letter-spacing values from Figma are in % of font-size → stored as em.
+   Font-weight mapping per family:
+     ITC Avant Garde Gothic  →  regular 400 · medium 500 · semibold 600 · bold 700 · black 900
+     Avenir                  →  regular 350 · medium 400 · semibold 500 · bold 800 · black 900
+   ============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   1. CUSTOM PROPERTIES
+   --------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    /* — Font families — */
+    --font-display: "ITC Avant Garde Gothic", sans-serif;
+    --font-body: "Avenir", sans-serif;
+
+    /* — Font weights (display) — */
+    --fw-display-regular:  400; /* CE Book  */
+    --fw-display-medium:   500; /* Medium   */
+    --fw-display-semibold: 600; /* CE Demi  */
+    --fw-display-bold:     700; /* Bold     */
+    --fw-display-black:    900; /* Black    */
+
+    /* — Font weights (body) — */
+    --fw-body-regular:  350; /* Book   */
+    --fw-body-medium:   400; /* Roman  */
+    --fw-body-semibold: 500; /* Medium */
+    --fw-body-bold:     800; /* Heavy  */
+    --fw-body-black:    900; /* Black  */
+
+    /* -------------------------------------------------------------------------
+       WEB TYPE SCALE  (text/*)
+       Display font (ITC Avant Garde Gothic) — 5xl → 15xl
+       ------------------------------------------------------------------------- */
+
+    /* 15xl — 88 px */
+    --text-15xl-size: 5.5rem;
+    --text-15xl-lh:   1.1;
+    --text-15xl-ls:   -0.02em;
+
+    /* 14xl — 80 px */
+    --text-14xl-size: 5rem;
+    --text-14xl-lh:   1.1;
+    --text-14xl-ls:   -0.02em;
+
+    /* 13xl — 72 px */
+    --text-13xl-size: 4.5rem;
+    --text-13xl-lh:   1.1;
+    --text-13xl-ls:   -0.015em;
+
+    /* 12xl — 64 px */
+    --text-12xl-size: 4rem;
+    --text-12xl-lh:   1.1;
+    --text-12xl-ls:   -0.015em;
+
+    /* 11xl — 56 px */
+    --text-11xl-size: 3.5rem;
+    --text-11xl-lh:   1.1;
+    --text-11xl-ls:   -0.015em;
+
+    /* 10xl — 52 px */
+    --text-10xl-size: 3.25rem;
+    --text-10xl-lh:   1.15;
+    --text-10xl-ls:   -0.01em;
+
+    /* 9xl — 48 px */
+    --text-9xl-size: 3rem;
+    --text-9xl-lh:   1.15;
+    --text-9xl-ls:   -0.01em;
+
+    /* 8xl — 44 px */
+    --text-8xl-size: 2.75rem;
+    --text-8xl-lh:   1.15;
+    --text-8xl-ls:   -0.005em;
+
+    /* 7xl — 40 px */
+    --text-7xl-size: 2.5rem;
+    --text-7xl-lh:   1.2;
+    --text-7xl-ls:   -0.005em;
+
+    /* 6xl — 32 px */
+    --text-6xl-size: 2rem;
+    --text-6xl-lh:   1.2;
+    --text-6xl-ls:   0em;
+
+    /* 5xl — 28 px */
+    --text-5xl-size: 1.75rem;
+    --text-5xl-lh:   1.2;
+    --text-5xl-ls:   0em;
+
+    /* -------------------------------------------------------------------------
+       Body font (Avenir) — tiny → 4xl
+       ------------------------------------------------------------------------- */
+
+    /* 4xl — 26 px */
+    --text-4xl-size: 1.625rem;
+    --text-4xl-lh:   1.2;
+    --text-4xl-ls:   0em;
+
+    /* 3xl — 24 px */
+    --text-3xl-size: 1.5rem;
+    --text-3xl-lh:   1.15;
+    --text-3xl-ls:   0.005em;
+
+    /* 2xl — 20 px */
+    --text-2xl-size: 1.25rem;
+    --text-2xl-lh:   1.15;
+    --text-2xl-ls:   0.01em;
+
+    /* xl — 18 px */
+    --text-xl-size: 1.125rem;
+    --text-xl-lh:   1.15;
+    --text-xl-ls:   0.01em;
+
+    /* lg — 16 px */
+    --text-lg-size: 1rem;
+    --text-lg-lh:   1.15;
+    --text-lg-ls:   0.02em;
+
+    /* base — 14 px */
+    --text-base-size: 0.875rem;
+    --text-base-lh:   1.15;
+    --text-base-ls:   0.02em;
+
+    /* sm — 13 px */
+    --text-sm-size: 0.8125rem;
+    --text-sm-lh:   1.15;
+    --text-sm-ls:   0.02em;
+
+    /* xs — 12 px */
+    --text-xs-size: 0.75rem;
+    --text-xs-lh:   1.15;
+    --text-xs-ls:   0.02em;
+
+    /* 2xs — 11 px */
+    --text-2xs-size: 0.6875rem;
+    --text-2xs-lh:   1.15;
+    --text-2xs-ls:   0.01em;
+
+    /* tiny — 11 px, uppercase, wide tracking */
+    --text-tiny-size: 0.6875rem;
+    --text-tiny-lh:   1.15;
+    --text-tiny-ls:   0.08em;
+
+    /* -------------------------------------------------------------------------
+       PARAGRAPH SCALE  (paragraph/*)  — Avenir, relaxed leading
+       ------------------------------------------------------------------------- */
+
+    /* paragraph/3xl — 24 px */
+    --paragraph-3xl-size: 1.5rem;
+    --paragraph-3xl-lh:   1.2;
+    --paragraph-3xl-ls:   0.005em;
+
+    /* paragraph/2xl — 20 px */
+    --paragraph-2xl-size: 1.25rem;
+    --paragraph-2xl-lh:   1.38;
+    --paragraph-2xl-ls:   0.01em;
+
+    /* paragraph/xl — 18 px */
+    --paragraph-xl-size: 1.125rem;
+    --paragraph-xl-lh:   1.42;
+    --paragraph-xl-ls:   0.01em;
+
+    /* paragraph/lg — 16 px */
+    --paragraph-lg-size: 1rem;
+    --paragraph-lg-lh:   1.5;
+    --paragraph-lg-ls:   0.02em;
+
+    /* paragraph/base — 14 px */
+    --paragraph-base-size: 0.875rem;
+    --paragraph-base-lh:   1.5;
+    --paragraph-base-ls:   0.02em;
+
+    /* paragraph/sm — 13 px */
+    --paragraph-sm-size: 0.8125rem;
+    --paragraph-sm-lh:   1.5;
+    --paragraph-sm-ls:   0.02em;
+
+    /* paragraph/xs — 12 px */
+    --paragraph-xs-size: 0.75rem;
+    --paragraph-xs-lh:   1.6;
+    --paragraph-xs-ls:   0.02em;
+
+    /* paragraph/2xs — 11 px */
+    --paragraph-2xs-size: 0.6875rem;
+    --paragraph-2xs-lh:   1.6;
+    --paragraph-2xs-ls:   0.01em;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   2. UTILITY CLASSES
+   --------------------------------------------------------------------------- */
+@layer components {
+
+  /* ———————————————————————————————————————————————————————————————————————————
+     Web type scale — display (ITC Avant Garde Gothic)
+     Usage: class="text-15xl font-display-bold"
+     ——————————————————————————————————————————————————————————————————————————— */
+  .text-15xl {
+    font-family: var(--font-display);
+    font-size: var(--text-15xl-size);
+    line-height: var(--text-15xl-lh);
+    letter-spacing: var(--text-15xl-ls);
+  }
+  .text-14xl {
+    font-family: var(--font-display);
+    font-size: var(--text-14xl-size);
+    line-height: var(--text-14xl-lh);
+    letter-spacing: var(--text-14xl-ls);
+  }
+  .text-13xl {
+    font-family: var(--font-display);
+    font-size: var(--text-13xl-size);
+    line-height: var(--text-13xl-lh);
+    letter-spacing: var(--text-13xl-ls);
+  }
+  .text-12xl {
+    font-family: var(--font-display);
+    font-size: var(--text-12xl-size);
+    line-height: var(--text-12xl-lh);
+    letter-spacing: var(--text-12xl-ls);
+  }
+  .text-11xl {
+    font-family: var(--font-display);
+    font-size: var(--text-11xl-size);
+    line-height: var(--text-11xl-lh);
+    letter-spacing: var(--text-11xl-ls);
+  }
+  .text-10xl {
+    font-family: var(--font-display);
+    font-size: var(--text-10xl-size);
+    line-height: var(--text-10xl-lh);
+    letter-spacing: var(--text-10xl-ls);
+  }
+  .text-9xl {
+    font-family: var(--font-display);
+    font-size: var(--text-9xl-size);
+    line-height: var(--text-9xl-lh);
+    letter-spacing: var(--text-9xl-ls);
+  }
+  .text-8xl {
+    font-family: var(--font-display);
+    font-size: var(--text-8xl-size);
+    line-height: var(--text-8xl-lh);
+    letter-spacing: var(--text-8xl-ls);
+  }
+  .text-7xl {
+    font-family: var(--font-display);
+    font-size: var(--text-7xl-size);
+    line-height: var(--text-7xl-lh);
+    letter-spacing: var(--text-7xl-ls);
+  }
+  .text-6xl {
+    font-family: var(--font-display);
+    font-size: var(--text-6xl-size);
+    line-height: var(--text-6xl-lh);
+    letter-spacing: var(--text-6xl-ls);
+  }
+  .text-5xl {
+    font-family: var(--font-display);
+    font-size: var(--text-5xl-size);
+    line-height: var(--text-5xl-lh);
+    letter-spacing: var(--text-5xl-ls);
+  }
+
+  /* ———————————————————————————————————————————————————————————————————————————
+     Web type scale — body (Avenir)
+     Usage: class="text-4xl font-body-semibold"
+     ——————————————————————————————————————————————————————————————————————————— */
+  .text-4xl {
+    font-family: var(--font-body);
+    font-size: var(--text-4xl-size);
+    line-height: var(--text-4xl-lh);
+    letter-spacing: var(--text-4xl-ls);
+  }
+  .text-3xl {
+    font-family: var(--font-body);
+    font-size: var(--text-3xl-size);
+    line-height: var(--text-3xl-lh);
+    letter-spacing: var(--text-3xl-ls);
+  }
+  .text-2xl {
+    font-family: var(--font-body);
+    font-size: var(--text-2xl-size);
+    line-height: var(--text-2xl-lh);
+    letter-spacing: var(--text-2xl-ls);
+  }
+  .text-xl {
+    font-family: var(--font-body);
+    font-size: var(--text-xl-size);
+    line-height: var(--text-xl-lh);
+    letter-spacing: var(--text-xl-ls);
+  }
+  .text-lg {
+    font-family: var(--font-body);
+    font-size: var(--text-lg-size);
+    line-height: var(--text-lg-lh);
+    letter-spacing: var(--text-lg-ls);
+  }
+  .text-base {
+    font-family: var(--font-body);
+    font-size: var(--text-base-size);
+    line-height: var(--text-base-lh);
+    letter-spacing: var(--text-base-ls);
+  }
+  .text-sm {
+    font-family: var(--font-body);
+    font-size: var(--text-sm-size);
+    line-height: var(--text-sm-lh);
+    letter-spacing: var(--text-sm-ls);
+  }
+  .text-xs {
+    font-family: var(--font-body);
+    font-size: var(--text-xs-size);
+    line-height: var(--text-xs-lh);
+    letter-spacing: var(--text-xs-ls);
+  }
+  .text-2xs {
+    font-family: var(--font-body);
+    font-size: var(--text-2xs-size);
+    line-height: var(--text-2xs-lh);
+    letter-spacing: var(--text-2xs-ls);
+  }
+  .text-tiny {
+    font-family: var(--font-body);
+    font-size: var(--text-tiny-size);
+    line-height: var(--text-tiny-lh);
+    letter-spacing: var(--text-tiny-ls);
+    text-transform: uppercase;
+  }
+
+  /* ———————————————————————————————————————————————————————————————————————————
+     Paragraph scale (Avenir, relaxed leading)
+     Usage: class="paragraph-lg font-body-regular"
+     ——————————————————————————————————————————————————————————————————————————— */
+  .paragraph-3xl {
+    font-family: var(--font-body);
+    font-size: var(--paragraph-3xl-size);
+    line-height: var(--paragraph-3xl-lh);
+    letter-spacing: var(--paragraph-3xl-ls);
+  }
+  .paragraph-2xl {
+    font-family: var(--font-body);
+    font-size: var(--paragraph-2xl-size);
+    line-height: var(--paragraph-2xl-lh);
+    letter-spacing: var(--paragraph-2xl-ls);
+  }
+  .paragraph-xl {
+    font-family: var(--font-body);
+    font-size: var(--paragraph-xl-size);
+    line-height: var(--paragraph-xl-lh);
+    letter-spacing: var(--paragraph-xl-ls);
+  }
+  .paragraph-lg {
+    font-family: var(--font-body);
+    font-size: var(--paragraph-lg-size);
+    line-height: var(--paragraph-lg-lh);
+    letter-spacing: var(--paragraph-lg-ls);
+  }
+  .paragraph-base {
+    font-family: var(--font-body);
+    font-size: var(--paragraph-base-size);
+    line-height: var(--paragraph-base-lh);
+    letter-spacing: var(--paragraph-base-ls);
+  }
+  .paragraph-sm {
+    font-family: var(--font-body);
+    font-size: var(--paragraph-sm-size);
+    line-height: var(--paragraph-sm-lh);
+    letter-spacing: var(--paragraph-sm-ls);
+  }
+  .paragraph-xs {
+    font-family: var(--font-body);
+    font-size: var(--paragraph-xs-size);
+    line-height: var(--paragraph-xs-lh);
+    letter-spacing: var(--paragraph-xs-ls);
+  }
+  .paragraph-2xs {
+    font-family: var(--font-body);
+    font-size: var(--paragraph-2xs-size);
+    line-height: var(--paragraph-2xs-lh);
+    letter-spacing: var(--paragraph-2xs-ls);
+  }
+
+  /* ———————————————————————————————————————————————————————————————————————————
+     Font weight utilities
+     Apply on top of any .text-* or .paragraph-* class.
+     Weights differ per font family — display weights (font-display-*)
+     are for ITC Avant Garde Gothic; body weights (font-body-*) for Avenir.
+     ——————————————————————————————————————————————————————————————————————————— */
+
+  /* Display (ITC Avant Garde Gothic) */
+  .font-display-regular  { font-weight: var(--fw-display-regular);  }
+  .font-display-medium   { font-weight: var(--fw-display-medium);   }
+  .font-display-semibold { font-weight: var(--fw-display-semibold); }
+  .font-display-bold     { font-weight: var(--fw-display-bold);     }
+  .font-display-black    { font-weight: var(--fw-display-black);    }
+
+  /* Body (Avenir) */
+  .font-body-regular  { font-weight: var(--fw-body-regular);  }
+  .font-body-medium   { font-weight: var(--fw-body-medium);   }
+  .font-body-semibold { font-weight: var(--fw-body-semibold); }
+  .font-body-bold     { font-weight: var(--fw-body-bold);     }
+  .font-body-black    { font-weight: var(--fw-body-black);    }
+}
+
