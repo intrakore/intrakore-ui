@@ -21,23 +21,23 @@ const dismissAlert = () => {
 
 const classes = computed(() => {
   const subtleBgs = {
-    yellow: "bg-surface-amber-2",
-    blue: "bg-surface-blue-2",
-    red: "bg-surface-red-2",
-    green: "bg-surface-green-2",
+    yellow: "bg-surface-amber-1",
+    blue: "bg-surface-blue-1",
+    red: "bg-surface-red-3",
+    green: "bg-surface-clearing-2",
   };
 
-  if (props.variant == "outline") return "border border-outline-gray-3";
+  if (props.variant == "outline") return "border border-outline-gray-4";
 
   return props.theme ? subtleBgs[props.theme] : "bg-surface-gray-2";
 });
 
 const icon = computed(() => {
   const data = {
-    yellow: { component: LucideWarning, css: 'text-ink-amber-3' },
-    blue: { component: LucideInfo, css: 'text-ink-blue-3' },
+    yellow: { component: LucideWarning, css: 'text-ink-amber-2' },
+    blue: { component: LucideInfo, css: 'text-ink-blue-2' },
     red: { component: LucideCircleX, css: 'text-ink-red-3' },
-    green: { component: LucideCheck, css: 'text-ink-green-3' },
+    green: { component: LucideCheck, css: 'text-ink-clearing-2' },
   }
   return props.theme ? data[props.theme] : null
 })
