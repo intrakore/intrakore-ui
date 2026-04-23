@@ -19,7 +19,7 @@
           v-if="item.route"
           :to="item.route"
           @click="item.onClick ? item.onClick() : null"
-          class="flex items-center rounded px-0.5 py-1 text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-outline-gray-3"
+          class="flex items-center rounded px-0.5 py-1 text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-outline-blueprint-2"
           :class="[
             i == crumbs.length - 1
               ? 'text-ink-blueprint-3'
@@ -36,7 +36,7 @@
           v-else-if="item.href"
           :href="item.href"
           @click="item.onClick ? item.onClick() : null"
-          class="flex items-center rounded px-0.5 py-1 text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-outline-gray-3"
+          class="flex items-center rounded px-0.5 py-1 text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-outline-blueprint-2"
           :class="[
             i == crumbs.length - 1
               ? 'text-ink-blueprint-3'
@@ -52,11 +52,11 @@
         <button
           v-else
           @click="item.onClick ? item.onClick() : null"
-          class="flex items-center rounded px-0.5 py-1 text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-outline-gray-3"
+          class="flex items-center rounded px-0.5 py-1 text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-outline-blueprint-2"
           :class="[
             i == crumbs.length - 1
               ? 'text-ink-blueprint-3'
-              : 'text-ink-blueprint-2 hover:text-ink-gray-7blueprint-3',
+              : 'text-ink-blueprint-2 hover:text-ink-blueprint-3',
           ]"
         >
           <slot name="prefix" :item="item" />
@@ -67,7 +67,7 @@
         </button>
         <span
           v-if="i != crumbs.length - 1"
-          class="mx-0.5 text-base text-ink-blueprint-2"
+          class="mx-0.5 text-base text-ink-blueprint-"
           aria-hidden="true"
         >
           /
