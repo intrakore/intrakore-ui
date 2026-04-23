@@ -4,11 +4,11 @@
       <Dropdown class="h-7" :options="dropdownItems">
         <Button variant="ghost">
           <template #icon>
-            <LucideEllipsis class="w-4 text-ink-gray-5" />
+            <LucideEllipsis class="w-4 text-ink-blueprint-2" />
           </template>
         </Button>
       </Dropdown>
-      <span class="ml-1 mr-0.5 text-base text-ink-gray-4" aria-hidden="true">
+      <span class="ml-1 mr-0.5 text-base text-ink-blueprint-2" aria-hidden="true">
         /
       </span>
     </template>
@@ -22,8 +22,8 @@
           class="flex items-center rounded px-0.5 py-1 text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-outline-gray-3"
           :class="[
             i == crumbs.length - 1
-              ? 'text-ink-gray-9'
-              : 'text-ink-gray-5 hover:text-ink-gray-7',
+              ? 'text-ink-blueprint-3'
+              : 'text-ink-blueprint-2 hover:text-ink-blueprint-3',
           ]"
         >
           <slot name="prefix" :item="item" />
@@ -39,8 +39,8 @@
           class="flex items-center rounded px-0.5 py-1 text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-outline-gray-3"
           :class="[
             i == crumbs.length - 1
-              ? 'text-ink-gray-9'
-              : 'text-ink-gray-5 hover:text-ink-gray-7',
+              ? 'text-ink-blueprint-3'
+              : 'text-ink-blueprint-2 hover:text-ink-blueprint-3',
           ]"
         >
           <slot name="prefix" :item="item" />
@@ -55,8 +55,8 @@
           class="flex items-center rounded px-0.5 py-1 text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-outline-gray-3"
           :class="[
             i == crumbs.length - 1
-              ? 'text-ink-gray-9'
-              : 'text-ink-gray-5 hover:text-ink-gray-7',
+              ? 'text-ink-blueprint-3'
+              : 'text-ink-blueprint-2 hover:text-ink-gray-7blueprint-3',
           ]"
         >
           <slot name="prefix" :item="item" />
@@ -67,7 +67,7 @@
         </button>
         <span
           v-if="i != crumbs.length - 1"
-          class="mx-0.5 text-base text-ink-gray-4"
+          class="mx-0.5 text-base text-ink-blueprint-2"
           aria-hidden="true"
         >
           /
