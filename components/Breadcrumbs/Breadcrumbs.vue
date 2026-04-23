@@ -67,7 +67,7 @@
         </button>
         <span
           v-if="i != crumbs.length - 1"
-          class="mx-0.5 text-base text-ink-blueprint-"
+          class="mx-0.5 text-base text-ink-blueprint-2"
           aria-hidden="true"
         >
           /

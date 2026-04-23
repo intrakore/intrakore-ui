@@ -20,14 +20,14 @@ export default function getFunnelChartOptions(config: FunnelChartConfig) {
   const total = values[0]
 
   const blueGradient = [
-    '#2d87d6',
-    '#4393da',
-    '#589fdf',
-    '#6dace3',
-    '#83b8e7',
-    '#98c4eb',
-    '#c3dcf3',
-    '#d8e9f7',
+    '#000FCC',
+    '#0717E4',
+    '#2A37F4',
+    '#5763FA',
+    '#8D95F6',
+    '#B9BEFE',
+    '#D6D9FF',
+    '#EBECFF',
     '#edf5fc',
     '#ffffff',
   ]

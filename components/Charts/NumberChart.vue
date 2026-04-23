@@ -1,18 +1,18 @@
 <template>
   <div
-    class="flex max-h-[140px] items-center gap-2 overflow-hidden bg-surface-white text-ink-gray-8 px-6 pt-5"
+    class="flex max-h-[140px] items-center gap-2 overflow-hidden bg-surface-white text-ink-blueprint-4 px-6 pt-5"
     :class="config.delta ? 'pb-6' : 'pb-3'"
   >
     <slot name="body">
       <div class="flex w-full flex-col">
         <slot name="title">
-          <span class="truncate text-sm font-medium text-ink-gray-5">
+          <span class="truncate text-sm font-medium text-ink-blueprint-3">
             {{ config.title }}
           </span>
         </slot>
         <slot name="subtitle" v-bind="{ formatValue }">
           <div
-            class="flex flex-1 items-center gap-0.5 flex-shrink-0 truncate text-[24px] text-ink-gray-6 font-semibold leading-10"
+            class="flex flex-1 items-center gap-0.5 flex-shrink-0 truncate text-[24px] text-ink-blueprint-4 font-semibold leading-10"
           >
             <div
               v-if="config.prefix"
