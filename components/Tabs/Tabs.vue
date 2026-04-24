@@ -51,7 +51,7 @@ defineSlots<{
         class="absolute rounded-full duration-300"
         :class="props.vertical ? indicatorYCss : indicatorXCss"
       >
-        <div class="w-full h-full bg-surface-gray-7" />
+        <div class="w-full h-full bg-surface-blueprint-8" />
       </TabsIndicator>
 
       <TabsTrigger as="template" v-for="(tab, i) in props.tabs" :value="i">
@@ -59,7 +59,7 @@ defineSlots<{
           <component
             :is="tab.route ? 'router-link' : Btn"
             :to="tab.route"
-            class="flex items-center gap-1.5 text-base text-ink-gray-5 duration-300 ease-in-out hover:text-ink-gray-9 data-[state=active]:text-ink-gray-9"
+            class="flex items-center gap-1.5 text-base text-ink-blueprint-2 duration-300 ease-in-out hover:text-ink-blueprint-3 data-[state=active]:text-ink-blueprint-4"
             :class="{ 'px-2.5': props.vertical, 'py-2.5': !props.vertical }"
           >
             <component v-if="tab.icon" :is="tab.icon" class="size-4">
