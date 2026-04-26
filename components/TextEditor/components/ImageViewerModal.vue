@@ -177,14 +177,14 @@ import { useTouchHandler } from '../../../composables/useTouchHandler'
 import { useImageNavigation } from '../../../composables/useImageNavigation'
 import { useZoomPan } from '../../../composables/useZoomPan'
 
-import LucideDownload from 'lucide-vue-next'
-import LucideMaximize from 'lucide-vue-next'
-import LucideMinimize from 'lucide-vue-next'
-import LucideChevronLeft from 'lucide-vue-next'
-import LucideChevronRight from 'lucide-vue-next'
-import LucidePlus from 'lucide-vue-next'
-import LucideMinus from 'lucide-vue-next'
-import LucideX from 'lucide-vue-next'
+import { Download as LucideDownload } from 'lucide-vue-next'
+import { Maximize as LucideMaximize } from 'lucide-vue-next'
+import { Minimize as LucideMinimize } from 'lucide-vue-next'
+import { ChevronLeft as LucideChevronLeft } from 'lucide-vue-next'
+import { ChevronRight as LucideChevronRight } from 'lucide-vue-next'
+import { Plus as LucidePlus } from 'lucide-vue-next'
+import { Minus as LucideMinus } from 'lucide-vue-next'
+import { X as LucideX } from 'lucide-vue-next'
 
 interface ImageInfo {
   src: string

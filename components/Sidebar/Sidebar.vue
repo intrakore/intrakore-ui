@@ -59,7 +59,7 @@ import SidebarHeader from './SidebarHeader.vue'
 import SidebarItem from './SidebarItem.vue'
 import { SidebarProps } from './types'
 
-import LucidePanelRightOpen from 'lucide-vue-next'
+import { PanelRightOpen as LucidePanelRightOpen } from 'lucide-vue-next'
 import SidebarSection from './SidebarSection.vue'
 
 const props = defineProps<SidebarProps>()

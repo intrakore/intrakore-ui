@@ -267,8 +267,8 @@ import Button from '../../../Button/Button.vue'
 import Select from '../../../Select/Select.vue'
 import type { Editor } from '@tiptap/vue-3'
 import type { UploadedFile } from '../../../../utils/useFileUpload'
-import LucideX from 'lucide-vue-next'
-import LucideImagePlus from 'lucide-vue-next'
+import { X as LucideX } from 'lucide-vue-next'
+import { ImagePlus as LucideImagePlus } from 'lucide-vue-next'
 
 interface UploadResult {
   success: boolean

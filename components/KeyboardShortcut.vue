@@ -72,15 +72,15 @@
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
-import LucideCommand from 'lucide-vue-next'
-import LucideShift from 'lucide-vue-next'
-import LucideAlt from 'lucide-vue-next'
-import IconArrowUp from 'lucide-vue-next'
-import IconArrowDown from 'lucide-vue-next'
-import IconArrowLeft from 'lucide-vue-next'
-import IconArrowRight from 'lucide-vue-next'
-import IconEnter from 'lucide-vue-next'
-import IconBackspace from 'lucide-vue-next'
+import { Command as LucideCommand } from 'lucide-vue-next'
+import { ArrowBigUp as LucideShift } from 'lucide-vue-next'
+import { Option as LucideAlt } from 'lucide-vue-next'
+import { ArrowUp as IconArrowUp } from 'lucide-vue-next'
+import { ArrowDown as IconArrowDown } from 'lucide-vue-next'
+import { ArrowLeft as IconArrowLeft } from 'lucide-vue-next'
+import { ArrowRight as IconArrowRight } from 'lucide-vue-next'
+import { CornerDownLeft as IconEnter } from 'lucide-vue-next'
+import { Delete as IconBackspace } from 'lucide-vue-next'
 
 // Robust mac detection (navigator.platform deprecated)
 const isMac = computed(() => {

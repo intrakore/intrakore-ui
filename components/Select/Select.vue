@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { SelectProps, SelectOption } from './types'
-import LucideChevronDown from 'lucide-vue-next'
-import LucideCheck from 'lucide-vue-next'
+import { ChevronDown as LucideChevronDown } from 'lucide-vue-next'
+import { Check as LucideCheck } from 'lucide-vue-next'
 
 import {
   SelectContent,

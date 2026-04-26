@@ -84,7 +84,7 @@ import { Button } from '../Button'
 import type { BreadcrumbsProps } from './types'
 import { ref, computed, nextTick, useTemplateRef } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import LucideEllipsis from 'lucide-vue-next'
+import { Ellipsis as LucideEllipsis } from 'lucide-vue-next'
 import type { BreadcrumbItem } from './types'
 
 const crumbsEl = useTemplateRef<HTMLDivElement>('crumbsRef')

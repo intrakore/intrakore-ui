@@ -22,8 +22,8 @@ import {
   ComboboxTrigger,
   ComboboxViewport,
 } from 'reka-ui'
-import LucideCheck from 'lucide-vue-next'
-import LucideChevronDown from 'lucide-vue-next'
+import { Check as LucideCheck } from 'lucide-vue-next'
+import { ChevronDown as LucideChevronDown } from 'lucide-vue-next'
 import type {
   CustomOption,
   SimpleOption,

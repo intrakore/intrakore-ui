@@ -2,10 +2,10 @@
 import { ref, onMounted, computed, nextTick } from 'vue'
 import { NodeViewWrapper, nodeViewProps } from '@tiptap/vue-3'
 import { detectPlatform, calculateAspectRatio } from './utils'
-import LucideMoveDiagonal2 from 'lucide-vue-next'
-import LucideAlignLeft from 'lucide-vue-next'
-import LucideAlignCenter from 'lucide-vue-next'
-import LucideAlignRight from 'lucide-vue-next'
+import { MoveDiagonal2 as LucideMoveDiagonal2 } from 'lucide-vue-next'
+import { AlignLeft as LucideAlignLeft } from 'lucide-vue-next'
+import { AlignCenter as LucideAlignCenter } from 'lucide-vue-next'
+import { AlignRight as LucideAlignRight } from 'lucide-vue-next'
 
 const props = defineProps(nodeViewProps)
 
