@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import LucideUser from '~icons/lucide/user'
+import LucideUser from 'lucide-vue-next'
 import { Select } from 'frappe-ui'
 
 const value = ref('')

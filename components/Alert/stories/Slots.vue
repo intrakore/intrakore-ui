@@ -1,6 +1,6 @@
 <script setup>
 import { Alert, Button } from 'frappe-ui'
-import LucideBadge from '~icons/lucide/badge-info'
+import LucideBadge from 'lucide-vue-next'
 </script>
 
 <template>

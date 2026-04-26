@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { Tabs } from 'frappe-ui'
-import LucideGithub from '~icons/lucide/github'
-import LucideTwitter from '~icons/lucide/twitter'
-import LucideLinkedin from '~icons/lucide/linkedin'
+import LucideGithub from 'lucide-vue-next'
+import LucideTwitter from 'lucide-vue-next'
+import LucideLinkedin from 'lucide-vue-next'
 
 const state = reactive({
   index: 0,

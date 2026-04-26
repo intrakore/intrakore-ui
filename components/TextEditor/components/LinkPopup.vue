@@ -64,11 +64,11 @@
 import { onMounted, ref, useTemplateRef, nextTick } from 'vue'
 import Button from '../../Button/Button.vue'
 import TextInput from '../../TextInput/TextInput.vue'
-import LucideCopy from '~icons/lucide/copy'
-import LucideCheck from '~icons/lucide/check'
-import LucidePencil from '~icons/lucide/pencil'
-import LucideX from '~icons/lucide/x'
-import Link2Off from '~icons/lucide/link-2-off'
+import LucideCopy from 'lucide-vue-next'
+import LucideCheck from 'lucide-vue-next'
+import LucidePencil from 'lucide-vue-next'
+import LucideX from 'lucide-vue-next'
+import Link2Off from 'lucide-vue-next'
 import { isValidUrl } from '../../../utils/url-validation'
 
 const props = defineProps<{

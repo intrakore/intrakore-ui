@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Button, Dialog, Dropdown } from 'frappe-ui'
-import LucideChevronDown from '~icons/lucide/chevron-down'
+import LucideChevronDown from 'lucide-vue-next'
 
 const open = ref(false)
 const selectedOption = ref('Option 1')

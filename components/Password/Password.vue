@@ -38,8 +38,8 @@
   </FormControl>
 </template>
 <script setup lang="ts">
-import LucideEye from "~icons/lucide/eye";
-import LucideEyeOff from "~icons/lucide/eye-off";
+import { Eye as LucideEye } from "lucide-vue-next";
+import { EyeOff as LucideEyeOff } from "lucide-vue-next";
 import KeyboardShortcut from "../KeyboardShortcut.vue";
 import FormControl from "../FormControl/FormControl.vue";
 import Tooltip from "../Tooltip/Tooltip.vue";

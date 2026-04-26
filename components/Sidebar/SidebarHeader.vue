@@ -60,7 +60,7 @@
 
 <script setup lang="ts">
 import { inject } from 'vue'
-import LucideChevronDown from '~icons/lucide/chevron-down'
+import LucideChevronDown from 'lucide-vue-next'
 import Dropdown from '../Dropdown/Dropdown.vue'
 import { SidebarHeaderProps } from './types'
 

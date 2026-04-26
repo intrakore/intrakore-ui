@@ -3,11 +3,11 @@ import { computed } from 'vue'
 
 import type { AlertProps } from "./types";
 
-import LucideX from "~icons/lucide/x";
-import LucideInfo from "~icons/lucide/info";
-import LucideCircleX from "~icons/lucide/circle-x";
-import LucideCheck from "~icons/lucide/circle-check";
-import LucideWarning from "~icons/lucide/triangle-alert";
+import { X as LucideX } from "lucide-vue-next";
+import { Info as LucideInfo } from "lucide-vue-next";
+import { CircleX as LucideCircleX } from "lucide-vue-next";
+import { CircleCheck as LucideCheck } from "lucide-vue-next";
+import { TriangleAlert as LucideWarning } from "lucide-vue-next";
 
 /** Controls the visibility of the alert for dismissing or toggling it */
 const visible = defineModel({ default: true });

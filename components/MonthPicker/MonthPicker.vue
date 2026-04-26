@@ -4,9 +4,9 @@ import { MonthPickerProps } from './types'
 
 import Button from '../Button/Button.vue'
 import Popover from '../Popover/Popover.vue'
-import LucideCalender from '~icons/lucide/calendar'
-import LucideChevronLeft from '~icons/lucide/chevron-left'
-import LucideChevronRight from '~icons/lucide/chevron-right'
+import LucideCalender from 'lucide-vue-next'
+import LucideChevronLeft from 'lucide-vue-next'
+import LucideChevronRight from 'lucide-vue-next'
 
 const props = withDefaults(defineProps<MonthPickerProps>(), {
   placeholder: 'Select month',

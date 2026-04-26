@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Breadcrumbs } from 'frappe-ui'
-import LucideHouse from '~icons/lucide/house'
-import LucideList from '~icons/lucide/list'
-import LucideView from '~icons/lucide/user-star'
+import LucideHouse from 'lucide-vue-next'
+import LucideList from 'lucide-vue-next'
+import LucideView from 'lucide-vue-next'
 </script>
 
 <template>

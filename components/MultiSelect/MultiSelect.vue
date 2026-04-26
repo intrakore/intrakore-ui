@@ -12,12 +12,12 @@ import {
   ComboboxViewport,
 } from "reka-ui";
 
-import LucideX from "~icons/lucide/x";
+import { X as LucideX } from "lucide-vue-next";
 import Button from "../Button/Button.vue";
 import Popover from "../Popover/Popover.vue";
-import LucideCheck from "~icons/lucide/check";
+import { Check as LucideCheck } from "lucide-vue-next";
 import LoadingIndicator from "../LoadingIndicator.vue";
-import LucideChevronDown from "~icons/lucide/chevron-down";
+import { ChevronDown as LucideChevronDown } from "lucide-vue-next";
 
 const props = withDefaults(defineProps<MultiSelectProps>(), {
   placeholder: "Select option",

@@ -1,9 +1,9 @@
 <script setup>
 import { reactive } from 'vue'
-import LucideAtSign from '~icons/lucide/at-sign'
-import LucideCheckCircle from '~icons/lucide/check-circle'
-import LucideUsers from '~icons/lucide/users'
-import LucideUser from '~icons/lucide/user'
+import LucideAtSign from 'lucide-vue-next'
+import LucideCheckCircle from 'lucide-vue-next'
+import LucideUsers from 'lucide-vue-next'
+import LucideUser from 'lucide-vue-next'
 
 import {
   Avatar,
