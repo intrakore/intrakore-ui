@@ -4,7 +4,7 @@
     :duration="closable ? duration : 0"
     :class="[
       'toast-root-animatable',
-      'bg-surface-gray-6 border-none rounded-md px-4 py-1.5 shadow-lg flex items-center justify-between gap-3 min-w-[280px] max-w-[400px] pointer-events-auto list-none',
+      'bg-surface-blueprint-8 border-none rounded-md px-4 py-1.5 shadow-lg flex items-center justify-between gap-3 min-w-[280px] max-w-[400px] pointer-events-auto list-none',
     ]"
   >
     <div class="flex items-center gap-2 flex-grow overflow-hidden">
@@ -26,7 +26,7 @@
       <div class="flex flex-col flex-grow overflow-hidden">
         <ToastDescription
           v-if="message"
-          class="text-p-sm break-words text-ink-white"
+          class="text-p-sm break-words text-ink-blueprint-1"
           v-html="message"
         />
       </div>
@@ -34,7 +34,7 @@
     <div class="flex items-center gap-2 h-7">
       <ToastAction
         v-if="action"
-        class="flex-shrink-0 rounded px-2 py-1 text-sm text-ink-blue-link hover:text-ink-gray-3 focus:outline-none focus-visible:ring focus-visible:ring-outline-gray-4"
+        class="flex-shrink-0 rounded px-2 py-1 text-sm text-ink-blueprint-1 hover:text-ink-gray-1 focus:outline-none focus-visible:ring focus-visible:ring-outline-blueprint-2"
         :alt-text="action.altText || action.label"
         @click="handleAction"
       >
@@ -42,7 +42,7 @@
       </ToastAction>
       <ToastClose
         v-if="closable"
-        class="flex-shrink-0 rounded p-1 text-ink-white hover:text-ink-gray-3 focus:outline-none focus-visible:ring focus-visible:ring-outline-gray-4"
+        class="flex-shrink-0 rounded p-1 text-ink-blueprint-1 hover:text-ink-gray-1 focus:outline-none focus-visible:ring focus-visible:ring-outline-blueprint-2"
       >
         <LucideX class="size-4" />
       </ToastClose>
