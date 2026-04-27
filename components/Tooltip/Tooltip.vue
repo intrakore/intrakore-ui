@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<TooltipProps>(), {
   text: '',
   placement: 'top',
   hoverDelay: 0.5,
-  arrowClass: 'fill-surface-gray-7',
+  arrowClass: 'fill-surface-blueprint-7',
   disabled: false,
 })
 
@@ -62,7 +62,7 @@ defineSlots<{
         >
           <slot name="body">
             <div
-              class="rounded bg-surface-gray-7 px-2 py-1 text-xs text-ink-white shadow-xl"
+              class="rounded bg-surface-blueprint-8 px-2 py-1 text-xs text-ink-blueprint-1 shadow-xl"
             >
               <slot name="content">{{ props.text }}</slot>
             </div>
