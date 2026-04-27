@@ -293,11 +293,11 @@ const reset = () => {
 
 const variantClasses = computed(() => {
   const borderCss =
-    'border focus-within:border-outline-gray-4 focus-within:ring-2 focus-within:ring-outline-gray-3'
+    'border focus-within:border-outline-blueprint-2 focus-within:ring-2 focus-within:ring-outline-blueprint-3'
 
   return {
-    subtle: `${borderCss} bg-surface-gray-2 hover:bg-surface-gray-3 border-transparent`,
-    outline: `${borderCss} border-outline-gray-2`,
+    subtle: `${borderCss} bg-surface-blueprint-2 hover:bg-surface-blueprint-3 border-transparent`,
+    outline: `${borderCss} border-outline-blueprint-2`,
     ghost: '',
   }[props.variant]
 })
@@ -341,14 +341,14 @@ defineSlots<{
             @input="handleInputChange"
             @focus="handleFocus"
             @blur="handleBlur"
-            class="bg-transparent p-0 focus:outline-0 border-0 focus:border-0 focus:ring-0 text-base text-ink-gray-8 h-full placeholder:text-ink-gray-4 w-full"
+            class="bg-transparent p-0 focus:outline-0 border-0 focus:border-0 focus:ring-0 text-base text-ink-blueprint-4 h-full placeholder:text-ink-blueprint-2 w-full"
             :placeholder="placeholder || ''"
             :disabled="disabled"
             autocomplete="off"
           />
         </div>
         <ComboboxTrigger :disabled="disabled">
-          <LucideChevronDown class="h-4 w-4 text-ink-gray-5" />
+          <LucideChevronDown class="h-4 w-4 text-ink-blueprint-3" />
         </ComboboxTrigger>
       </ComboboxAnchor>
       <ComboboxPortal>
@@ -364,7 +364,7 @@ defineSlots<{
             :class="{ 'px-1.5 pt-1.5': !isGroup(filteredOptions[0]) }"
           >
             <ComboboxEmpty
-              class="text-ink-gray-5 text-base text-center py-1.5 px-2.5"
+              class="text-ink-blueprint-2 text-base text-center py-1.5 px-2.5"
             >
               {{ searchTerm ? `No results found for "${searchTerm}"` : "No results found" }}
             </ComboboxEmpty>
@@ -374,7 +374,7 @@ defineSlots<{
             >
               <ComboboxGroup class="px-1.5" v-if="isGroup(optionOrGroup)">
                 <ComboboxLabel
-                  class="px-2.5 pt-3 pb-1.5 text-sm font-medium text-ink-gray-5 sticky top-0 bg-surface-modal z-10"
+                  class="px-2.5 pt-3 pb-1.5 text-sm font-medium text-ink-blueprint-3 sticky top-0 bg-surface-modal z-10"
                 >
                   {{ optionOrGroup.group }}
                 </ComboboxLabel>
@@ -383,7 +383,7 @@ defineSlots<{
                   :key="`${index}-${idx}`"
                   :value="getKey(option)"
                   :disabled="isDisabled(option)"
-                  class="text-base leading-none text-ink-gray-7 rounded flex items-center h-7 px-2.5 py-1.5 relative select-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-surface-gray-3"
+                  class="text-base leading-none text-ink-gray-8 rounded flex items-center h-7 px-2.5 py-1.5 relative select-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-surface-blueprint-2"
                 >
                   <slot
                     v-if="getSlotName(option)"
@@ -413,7 +413,7 @@ defineSlots<{
                 :key="index"
                 :value="getKey(optionOrGroup)"
                 :disabled="isDisabled(optionOrGroup)"
-                class="text-base leading-none text-ink-gray-7 rounded flex items-center h-7 px-2.5 py-1.5 relative select-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-surface-gray-3"
+                class="text-base leading-none text-ink-gray-8 rounded flex items-center h-7 px-2.5 py-1.5 relative select-none data-[disabled]:opacity-50 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-surface-blueprint-2"
               >
                 <slot
                   v-if="getSlotName(optionOrGroup)"

@@ -53,16 +53,16 @@ const selectClasses = computed(() => {
   let variant = props.disabled ? 'disabled' : props.variant
   let variantClasses = {
     subtle:
-      'border border-[--surface-gray-2] bg-surface-gray-2 hover:border-outline-gray-modals hover:bg-surface-gray-3',
+      'border border-outline-blueprint-2 bg-surface-blueprint-2 hover:border-outline-blueprint-3 hover:bg-surface-blueprint-3',
     outline:
-      'border border-outline-gray-2 bg-surface-white hover:border-outline-gray-3',
+      'border border-outline-blueprint-2 bg-surface-white hover:border-outline-blueprint-3',
     ghost:
-      'bg-transparent border-transparent hover:bg-surface-gray-3 focus:bg-surface-gray-3',
+      'border border-outline-blueprint-2 bg-surface-white hover:border-outline-blueprint-3',
     disabled: [
       'border cursor-not-allowed',
-      props.variant !== 'ghost' ? 'bg-surface-gray-1' : '',
+      props.variant !== 'ghost' ? 'bg-surface-blueprint-1' : '',
       props.variant === 'outline'
-        ? 'border-outline-gray-2'
+        ? 'border-outline-blueprint-1'
         : 'border-transparent',
     ],
   }[variant]
@@ -72,7 +72,7 @@ const selectClasses = computed(() => {
     fontSizeClasses.value,
     paddingClasses.value,
     variantClasses,
-    'transition-colors w-full focus:ring-2 data-[state=open]:ring-2 ring-outline-gray-3 ',
+    'transition-colors w-full focus:ring-2 data-[state=open]:ring-2 ring-outline-blueprint-2 ',
   ]
 })
 
@@ -101,7 +101,7 @@ defineSlots<{
 <template>
   <SelectRoot v-model="model">
     <SelectTrigger
-      class="inline-flex items-center gap-2 outline-none text-base text-ink-gray-7 data-[placeholder]:text-ink-gray-4 data-[disabled]:text-ink-gray-4"
+      class="inline-flex items-center gap-2 outline-none text-base text-ink-blueprint-4 data-[placeholder]:text-ink-blueprint-3 data-[disabled]:text-ink-blueprint-2"
       aria-label="Customise options"
       :class="[selectClasses, $attrs.class]"
       :disabled="disabled"
@@ -109,7 +109,7 @@ defineSlots<{
       <slot name="prefix" />
       <SelectValue :placeholder="placeholder" class="truncate" />
       <slot name="suffix">
-        <LucideChevronDown class="size-4 text-ink-gray-4 ml-auto shrink-0" />
+        <LucideChevronDown class="size-4 text-ink-blueprint-4 ml-auto shrink-0" />
       </slot>
     </SelectTrigger>
 
@@ -124,7 +124,7 @@ defineSlots<{
             :key="option.value"
             :value="option.value"
             :class="[sizeClasses, paddingClasses, fontSizeClasses]"
-            class="text-base text-ink-gray-9 flex items-center data-[highlighted]:bg-surface-gray-2 border-0 data-[state=checked]:bg-surface-gray-2 data-[disabled]:text-ink-gray-4 select-none"
+            class="text-base text-ink-gray-9 flex items-center data-[highlighted]:bg-surface-blueprint-2 border-0 data-[state=checked]:bg-surface-blueprint-2 data-[disabled]:text-ink-gray-4 select-none"
           >
             <SelectItemText>
               <slot name="option" v-bind="{ option }">{{ option.label }}</slot>
@@ -147,7 +147,7 @@ defineSlots<{
 
 <style>
 @keyframes fadeInScale {
-  from {
+  from {em
     opacity: 0;
     transform: scale(0.9);
   }
