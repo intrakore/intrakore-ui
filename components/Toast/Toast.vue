@@ -56,7 +56,7 @@ import { ToastAction, ToastClose, ToastDescription, ToastRoot } from 'reka-ui'
 import { Info as LucideInfo } from 'lucide-vue-next'
 import { AlertTriangle as LucideAlertTriangle } from 'lucide-vue-next'
 import { X as LucideX } from 'lucide-vue-next'
-import CircleCheck from 'intrakore-ui/icons/CircleCheckIcon.vue'
+import CircleCheck from '../../../icons/CircleCheckIcon.vue'
 import type { ToastProps } from './types'
 
 const props = defineProps<ToastProps>()

@@ -20,7 +20,7 @@ import { GalleryVertical as GalleryVertical } from 'lucide-vue-next'
 import { Link as Link } from 'lucide-vue-next'
 import { Minus as Minus } from 'lucide-vue-next'
 import { Table as Table } from 'lucide-vue-next'
-import { TableOfContents as TableOfContents } from 'lucide-vue-next'
+import { BookMarked as TableOfContents } from "lucide-vue-next"
 
 export const SlashCommandSuggestionKey = new PluginKey<any>(
   'slashCommandSuggestion',
