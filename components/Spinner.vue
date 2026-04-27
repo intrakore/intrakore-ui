@@ -1,10 +1,8 @@
 <template>
-<<<<<<< HEAD
   <svg
-    class="max-w-xs animate-spin"
+    class="animate-spin"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
-    :style="`scale: ${scale}%;`"
     viewBox="0 0 24 24"
   >
     <circle
@@ -22,18 +20,8 @@
     ></path>
   </svg>
 </template>
-<script setup lang="ts">
-defineProps({ scale: { required: false, default: 100 } })
-=======
-  <Spinner class="w-3 h-3 mr-2 -ml-1" />
-</template>
 <script>
-import Spinner from './Spinner.vue'
 export default {
-  name: 'LoadingIndicator',
-  components: {
-    Spinner,
-  },
+  name: 'Spinner',
 }
->>>>>>> 9165654b (feat: first commit)
 </script>

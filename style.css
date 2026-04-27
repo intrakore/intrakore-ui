@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ── Avenir ── */
 @font-face {
   font-family: 'Avenir';
@@ -56,10 +57,13 @@
   font-style: normal;
 }
 
+=======
+>>>>>>> 9165654b (feat: first commit)
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 /* =============================================================================
    TYPOGRAPHY SCALE — Intrakore Design System
    Source: Figma file "Intrakore-Design-system" (node 8828:31362)
@@ -478,3 +482,16 @@
   .font-body-black    { font-weight: var(--fw-body-black);    }
 }
 
+=======
+@layer components {
+  .form-input,
+  .form-textarea,
+  .form-select {
+    @apply py-1 text-base leading-5 placeholder-gray-700 bg-gray-100 border-0 rounded-md focus:ring-0 focus:bg-gray-200 focus:shadow-none;
+  }
+
+  .form-checkbox {
+    @apply text-blue-500 rounded-md;
+  }
+}
+>>>>>>> 9165654b (feat: first commit)
