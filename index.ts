@@ -107,4 +107,5 @@ export * from './data-fetching'
 // plugin
 export { confirmDialog } from './utils/confirmDialog.js'
 export { default as pageMetaPlugin } from './utils/pageMeta.js'
+export { default as IntrakoreUI } from './utils/plugin.js'
 export { default as FrappeUI } from './utils/plugin.js'
